@@ -1,7 +1,7 @@
-(function (Window) {
+(function (window) {
   'use strict';
 
-  var App  = Window.App || {};
+  var App  = window.App || {};
 
   function DataStore() {
 
@@ -21,7 +21,7 @@ DataStore.prototype.remove = function (key) {
  };
 
   App.DataStore = DataStore;
-  Window.App = App;
+  window.App = App;
 
 
-})(Window);
+})(window);
