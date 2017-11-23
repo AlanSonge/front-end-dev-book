@@ -30,8 +30,10 @@
   Checklist.prototype.addClickHandler = function (fn) {
     this.$element.on('click', 'input', function (envent) {
       var email = envent.target.value;
-      this.removeRow(email);
-      fn(email);
+
+      fn(email).then(function () {
+        this.removeRow(email);
+      }).bind(this);
     }.bind(this));
   };
 
